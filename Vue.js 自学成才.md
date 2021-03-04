@@ -16,3 +16,13 @@ npm run serve
 npm run dev
 ```
 
+#### vue-cli创建项目命令
+
+在对应的文件夹cmd下敲vue ui即可
+
+#### vue安装less
+
+npm install --save less less-loader
+
+注：less是一种css预编译器，非常强大，但这里可能出现问题，因为有可能less-loader的版本太新了不兼容，所以建议less-loader换成npm install less-loader@5.0.0
+
