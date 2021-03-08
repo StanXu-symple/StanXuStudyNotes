@@ -226,7 +226,63 @@ background-image: linear-gradient(115deg,#FFFFFF 0%, #6284FF 50%, #FF0000 100%)
 
 #### 盒子模型
 
+什么是盒子
 
+![CSS box-model](https://www.runoob.com/images/box-model.gif)
+
+```css
+margin:外边距
+padding:内边距
+border:边框
+```
+
+##### 边框
+
+1.边框的粗细
+
+2.边框的样式
+
+3.边框的颜色
+
+```css
+/*边框粗细，边框风格，边框颜色*/
+border:5px solid red
+```
+
+##### 外边距
+
+```css
+/*依次为上下左右设置外边距*/
+padding: 0 0 0 0;
+/*padding两个属性是分别为上下和左右*/
+padding:0 0;
+/*外边距的妙用：居中元素*/
+margin: 0 auto;
+/*分别设置外边距上下左右*/
+margin-top: 0;
+margin-bottom: 0;
+margin-left: 0;
+margin-right:0;
+```
+
+##### 内边距
+
+```css
+/*语法与外边距差别不大*/
+padding: 0 0 0 0;
+```
+
+##### 内外边距的区别
+
+1.margin和padding都是盒模型(Box Model)的重要元素，二者都是用来处理与其他盒子的距离关系进行布局的。
+
+2.形象的介绍，夏季女生在地铁遇到色狼变态时有发生，如果选择穿上羽绒服与色狼保持距离，那就是padding内边距，如果选择移动自己的位置远离色狼，那就是margin外边距。
+
+3.就与borde边框的位置来看，pading在border边框内，margin在border边框外。
+
+4.padding内边距会改变盒模型的大小（即宽高），margin则不会。
+
+5、margin内边距用负值，pading不可以。
 
 ## 常用的css语言
 
