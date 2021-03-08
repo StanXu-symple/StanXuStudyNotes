@@ -284,6 +284,131 @@ padding: 0 0 0 0;
 
 5、margin内边距用负值，pading不可以。
 
+##### 圆角边框
+
+```css
+/*左上 右上 右下 左下,如果只有两个值就是左上和右下*/
+border-radius: 50px 20px 10px 5px;
+/*圆形*/
+border-radius: 100px;
+```
+
+#### 浮动
+
+块级元素：独占一行
+
+```css
+h1~h6 p div 列表...
+```
+
+行内元素：不独占一行
+
+```css
+span a img strong...
+```
+
+行内元素可以被包含在块级元素中，反之不可以
+
+```css
+/*块元素*/
+block:  inline  行内元素
+block:  inline-block 是块元素 ，但是可以内联，在一行
+block:  none  隐藏
+```
+
+``` css
+/*浮动*/
+float: right|left|none|inherit
+/*清除浮动*/
+clear: right|left|none|both|inherit
+```
+
+父级边框塌陷的问题：
+
+解决方案：
+
+方法一.增加父级元素的高度
+
+```css
+#father{
+    border: 1px #000 solid;
+    height: 800px;
+}
+```
+
+方法二.增加一个空的div标签，清除浮动
+
+```css
+<div class="clear"></div>
+.clear{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+```
+
+方法三：overflow
+
+```css
+/*
+overflow 属性规定当内容溢出元素框时发生的事情。
+visible	默认值。内容不会被修剪，会呈现在元素框之外。
+hidden	内容会被修剪，并且其余内容是不可见的。
+scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+inherit	规定应该从父元素继承 overflow 属性的值。
+*/
+overflow: hidden;
+```
+
+方法四：父类添加一个伪类：after
+
+```css
+/*业内最火的解决方案*/
+#father:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+```
+
+#### 定位
+
+##### 相对定位
+
+```css
+/*相对之前的位置的偏移，原来的位置会被保留*/
+position:relative
+left: 0px;  /*向右偏移0px，这里和普通认知是反的*/ 
+right: 0px;  /*向左偏移0px*/
+bottom: -10px;/*向上偏移-10px*/
+top: 0px /*向下偏移0px*/
+```
+
+##### 绝对定位
+
+```css
+/*
+1.没有父级元素定位的前提下，相对于浏览器的定位
+2.假设父级元素存在定位，我们通常会相对于父级元素进行偏移
+3.在父级元素范围内移动
+*/
+position: absolute
+```
+
+##### 固定定位
+
+```css
+/*顾名思义，定死的，怎样都不动的*/
+position: fixed
+```
+
+##### z-index
+
+默认是0，最高无线~999
+
+属性设置元素的堆叠顺序，拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+
 ## 常用的css语言
 
 ```css
