@@ -22,3 +22,7 @@ grant update on testdb.* to common_user@'%'
 grant delete on testdb.* to common_user@'%'  
 ```
 
+## mysql-用户表详解
+
+[https://www.cnblogs.com/liuhaidon/archive/2019/09/12/11511129.html](https://www.cnblogs.com/liuhaidon/archive/2019/09/12/11511129.html)
+
