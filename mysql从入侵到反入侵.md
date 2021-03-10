@@ -6,7 +6,7 @@
 
 ![image-20210310114740334](\picture\Beinvaded.png)
 
-## mysql登录认证
+## mysql远程登录认证
 
 ```mysql
 --授权root用户可以从任意电脑登录MySQL数据库。如下所示：
