@@ -303,3 +303,30 @@ module.exports = {
 
 ```
 
+## axios拦截器
+
+## vue router
+
+什么是路由：根据不同的路径显示不同的页面就叫路由
+
+
+
+## vue-cli创建项目选路由时是history还是router
+
+在通过vue-cli创建项目的时候，会出现 Use history mode for router? 也就是在问你：**是不是用history模式来创建路由**
+
+**hash模式和history模式的不同**
+
+最直观的区别就是**在url中 hash 带了一个很丑的 #   而history是没有#的**
+
+对于vue这类渐进式前端开发框架，为了构建 SPA（单页面应用），需要引入前端路由系统，这也就是 Vue-Router 存在的意义。**前端路由的核心，就在于 —— 改变视图的同时不会向后端发出请求。**
+
+**为了达到这一目的，浏览器当前提供了以下两种支持：**
+
+　　**hash** —— 即地址栏 URL 中的 # 符号（此 hash 不是密码学里的散列运算）。比如这个 URL：http://www.abc.com/#/hello hash 的值为 #/hello。
+
+　　它的特点在于：**hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。**
+
+　　**history** —— 利用了 HTML5 History Interface 中新增的 **pushState() 和 replaceState() 方法**。（需要特定浏览器支持）这两个方法应用于浏览器的**历史记录栈**，在当前已有的 **back、forward、go** 的基础之上，**它们提供了对历史记录进行修改的功能**。**只是当它们执行修改时，虽然改变了当前的 URL，但浏览器不会立即向后端发送请求。**
+因此可以说，hash 模式和 history 模式都属于浏览器自身的特性，Vue-Router 只是利用了这两个特性（通过调用浏览器提供的接口）来实现前端路由.
+
